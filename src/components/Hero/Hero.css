@@ -1,0 +1,118 @@
+.hero-velvet {
+  background-color: #ffffff;
+  padding: 35px 0 25px; /* ← beaucoup plus compact */
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-block;
+  background-color: #FCE0EE;
+  color: #C4056B;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+/* Titre */
+.hero-title {
+  font-family: serif;
+  color: #1F1B1D;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-title span {
+  color: #F0047F;
+}
+
+/* Sous-titre */
+.hero-subtitle {
+  color: #5C5458;
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
+  line-height: 1.55;
+  max-width: 440px;
+  margin: 0 auto 20px;
+}
+
+/* Boutons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary,
+.hero-btn-outline {
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 500;
+  font-size: 0.93rem;
+  transition: all 0.25s ease;
+  min-width: 160px;
+  text-align: center;
+}
+
+.hero-btn-primary {
+  background-color: #F0047F;
+  color: #fff;
+  border: none;
+}
+
+.hero-btn-primary:hover {
+  background-color: #C4056B;
+  color: #fff;
+}
+
+.hero-btn-outline {
+  background-color: #fff;
+  color: #1F1B1D;
+  border: 1.5px solid #F5A9D2;
+}
+
+.hero-btn-outline:hover {
+  background-color: #FCE0EE;
+  color: #1F1B1D;
+  border-color: #F0047F;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .hero-velvet {
+    padding: 30px 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-velvet {
+    padding: 25px 0 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-outline {
+    width: 100%;
+    max-width: 250px;
+    padding: 11px 18px;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 18px;
+  }
+}

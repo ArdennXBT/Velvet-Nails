@@ -1,0 +1,113 @@
+.services-velvet {
+  background-color: #ffffff;
+  padding: 15px 0 40px;
+}
+
+.services-label {
+  color: #B0577E;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.services-category-block {
+  margin-bottom: 32px;
+}
+
+.services-category {
+  color: #F0047F;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+/* Grille */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Carte */
+.service-card {
+  background-color: #fff;
+  border: 1px solid #F3DCE3;
+  border-radius: 12px;
+  padding: 14px 16px;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: #F5A9D2;
+  box-shadow: 0 4px 12px rgba(240, 4, 127, 0.08);
+}
+
+.service-top {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.service-name {
+  color: #1F1B1D;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.service-price {
+  color: #F0047F;
+  font-weight: 600;
+  font-size: 0.93rem;
+}
+
+.service-duration {
+  color: #8A6672;
+  font-size: 0.78rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablette */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile large / tablette */
+@media (max-width: 768px) {
+  .services-velvet {
+    padding: 12px 0 30px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .services-category-block {
+    margin-bottom: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 13px 15px;
+  }
+
+  .services-label {
+    margin-bottom: 18px;
+  }
+}

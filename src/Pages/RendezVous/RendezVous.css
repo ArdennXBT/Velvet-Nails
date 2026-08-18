@@ -1,0 +1,318 @@
+.rdv-velvet {
+  background-color: #FDF6F8;
+  padding: 50px 0 70px;
+  min-height: 80vh;
+}
+
+.rdv-title {
+  font-family: serif;
+  color: #1F1B1D;
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.rdv-subtitle {
+  color: #8A6672;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* ===== CALENDRIER ===== */
+.calendrier-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.calendrier-arrow {
+  background: #fff;
+  border: 1.5px solid #F3DCE3;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: #C4056B;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendrier-arrow:hover {
+  background-color: #FCE0EE;
+  border-color: #F0047F;
+}
+
+.calendrier-mois {
+  font-family: serif;
+  color: #1F1B1D;
+  font-size: 1.15rem;
+  min-width: 160px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.calendrier-grille {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #F3DCE3;
+}
+
+.calendrier-jour-label {
+  color: #8A6672;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.calendrier-case {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #1F1B1D;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.calendrier-case.vide {
+  visibility: hidden;
+}
+
+.calendrier-case.dispo {
+  cursor: pointer;
+}
+
+.calendrier-case.dispo:hover {
+  background-color: #FCE0EE;
+}
+
+.calendrier-case.indispo {
+  color: #C9BEC3;
+}
+
+.calendrier-case.selectionne {
+  background-color: #F0047F;
+  color: #fff;
+  font-weight: 600;
+}
+
+.calendrier-case .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #F0047F;
+}
+
+.calendrier-case.selectionne .dot {
+  background-color: #fff;
+}
+
+.calendrier-legende {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 0.82rem;
+  color: #8A6672;
+  margin-top: 14px;
+}
+
+.calendrier-legende .dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #F0047F;
+  margin-right: 6px;
+}
+
+.indispo-dot {
+  background-color: #E3CFC5 !important;
+}
+
+/* ===== FORMULAIRE ===== */
+.rdv-info {
+  color: #8A6672;
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px dashed #F5A9D2;
+}
+
+.rdv-date-selectionnee {
+  font-family: serif;
+  font-style: italic;
+  color: #C4056B;
+  font-size: 1.35rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.rdv-label {
+  color: #8A6672;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.creneaux-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.creneau-btn {
+  background: #fff;
+  border: 1.5px solid #F3DCE3;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 0.88rem;
+  color: #1F1B1D;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.creneau-btn:hover {
+  border-color: #F0047F;
+  color: #F0047F;
+}
+
+.creneau-actif {
+  background-color: #F0047F;
+  border-color: #F0047F;
+  color: #fff;
+}
+
+.rdv-input {
+  border-radius: 10px !important;
+  border: 1.5px solid #F3DCE3 !important;
+  padding: 11px 14px !important;
+  font-size: 0.95rem;
+}
+
+.rdv-input:focus {
+  border-color: #F0047F !important;
+  box-shadow: 0 0 0 3px rgba(240, 4, 127, 0.12) !important;
+}
+
+.rdv-upload-zone {
+  border: 1.5px dashed #F5A9D2;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.rdv-upload-zone:hover {
+  background-color: #FDF6F8;
+  border-color: #F0047F;
+}
+
+.rdv-upload-text {
+  color: #C4056B;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.rdv-upload-hint {
+  color: #B0849A;
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.rdv-btn-confirm {
+  background-color: #F0047F;
+  color: #fff;
+  border-radius: 999px;
+  padding: 13px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.rdv-btn-confirm:hover {
+  background-color: #C4056B;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.rdv-confirmation {
+  background-color: #fff;
+  border: 1px solid #F3DCE3;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.rdv-confirmation h5 {
+  color: #C4056B;
+  font-family: serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.rdv-confirmation p {
+  color: #5C5458;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .rdv-velvet {
+    padding: 40px 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendrier-grille {
+    padding: 12px;
+    gap: 4px;
+  }
+
+  .calendrier-case {
+    font-size: 0.85rem;
+  }
+
+  .rdv-date-selectionnee {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rdv-title {
+    font-size: 1.8rem;
+  }
+
+  .creneaux-liste {
+    gap: 6px;
+  }
+
+  .creneau-btn {
+    padding: 8px 14px;
+    font-size: 0.84rem;
+  }
+}
