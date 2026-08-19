@@ -62,7 +62,7 @@
 }
 
 .faq-reponse-wrapper.open {
-  max-height: 150px; /* assez grand pour le texte */
+  max-height: 300px; /* marge large pour réponses plus longues */
 }
 
 .faq-reponse {

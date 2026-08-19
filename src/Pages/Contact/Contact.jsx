@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import './Contact.css';
@@ -28,30 +29,36 @@ function Contact() {
         <div className="container">
           <h1 className="contact-title" data-aos="fade-up">Contact</h1>
           <p className="contact-subtitle mb-5" data-aos="fade-up" data-aos-delay="80">
-            Une question ? Ecrivez-nous
+            Une question ? Écrivez-nous
           </p>
 
           <div className="row g-4">
             <div className="col-lg-5">
 
               <div className="contact-info-card mb-3" data-aos="fade-up" data-aos-delay="0">
-                <div className="contact-icon">📍</div>
+                <div className="contact-icon">
+                  <MapPin size={18} strokeWidth={2} />
+                </div>
                 <div>
                   <p className="contact-label">ADRESSE</p>
-                  <p className="contact-value">Cotonou, Benin</p>
+                  <p className="contact-value">Cotonou, Bénin</p>
                 </div>
               </div>
 
               <div className="contact-info-card mb-3" data-aos="fade-up" data-aos-delay="80">
-                <div className="contact-icon">📞</div>
+                <div className="contact-icon">
+                  <Phone size={18} strokeWidth={2} />
+                </div>
                 <div>
-                  <p className="contact-label">TELEPHONE</p>
+                  <p className="contact-label">TÉLÉPHONE</p>
                   <p className="contact-value">+229 00 00 00 00</p>
                 </div>
               </div>
 
               <div className="contact-info-card mb-3" data-aos="fade-up" data-aos-delay="160">
-                <div className="contact-icon">✉️</div>
+                <div className="contact-icon">
+                  <Mail size={18} strokeWidth={2} />
+                </div>
                 <div>
                   <p className="contact-label">EMAIL</p>
                   <p className="contact-value">contact@velvetnails.com</p>
@@ -59,7 +66,9 @@ function Contact() {
               </div>
 
               <div className="contact-info-card mb-4" data-aos="fade-up" data-aos-delay="240">
-                <div className="contact-icon">🕐</div>
+                <div className="contact-icon">
+                  <Clock size={18} strokeWidth={2} />
+                </div>
                 <div>
                   <p className="contact-label">HORAIRES</p>
                   <p className="contact-value">Lundi - Samedi : 9h - 18h</p>
@@ -78,17 +87,7 @@ function Contact() {
                 Discuter sur WhatsApp
               </a>
 
-              <div data-aos="fade-up" data-aos-delay="360">
-                <p className="contact-label mb-2">SUIVEZ-NOUS</p>
-                <div className="reseaux-liste">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="reseau-link">
-                    Instagram
-                  </a>
-                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="reseau-link">
-                    TikTok
-                  </a>
-                </div>
-              </div>
+              
 
             </div>
 
@@ -135,8 +134,8 @@ function Contact() {
                   </form>
                 ) : (
                   <div className="contact-confirmation">
-                    <h5>Message envoye !</h5>
-                    <p>Merci {form.nom}, nous vous repondrons rapidement.</p>
+                    <h5>Message envoyé !</h5>
+                    <p>Merci {form.nom}, nous vous répondrons rapidement.</p>
                   </div>
                 )}
               </div>

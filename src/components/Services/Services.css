@@ -48,8 +48,10 @@
 
 .service-top {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 6px;
 }
 
@@ -64,11 +66,23 @@
   color: #F0047F;
   font-weight: 600;
   font-size: 0.93rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .service-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   color: #8A6672;
   font-size: 0.78rem;
+}
+
+.duration-icon {
+  width: 12px;
+  height: 12px;
+  color: #F5A9D2;
+  flex-shrink: 0;
 }
 
 /* ========== RESPONSIVE ========== */

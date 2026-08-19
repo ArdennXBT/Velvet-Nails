@@ -57,7 +57,24 @@ function Services() {
                     <span className="service-name">{item.nom}</span>
                     <span className="service-price">{item.prix}</span>
                   </div>
-                  <span className="service-duration">{item.duree}</span>
+                  <span className="service-duration">
+                    <svg
+                      className="duration-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+                      <path
+                        d="M12 7.5V12L15 14"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    {item.duree}
+                  </span>
                 </div>
               ))}
             </div>

@@ -1,5 +1,5 @@
 .footer-velvet {
-  background-color: #F8C8DC; /* ← rose un peu plus vif */
+  background-color: #F8C8DC;
   padding: 30px 0 20px;
   color: #1F1B1D;
 }
@@ -28,18 +28,24 @@
 
 .footer-social {
   display: flex;
-  gap: 20px;
+  gap: 14px;
 }
 
-.footer-social a {
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
   color: #5F5A5C;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.footer-social a:hover {
-  color: #C2185B;
+.footer-social-link:hover {
+  background-color: #C2185B;
+  color: #fff;
 }
 
 .footer-bottom {
@@ -69,7 +75,7 @@
 
   .footer-social {
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
   }
 
   .footer-bottom {

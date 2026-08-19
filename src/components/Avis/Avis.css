@@ -12,7 +12,8 @@
   margin-bottom: 28px;
 }
 
-.avis-grid {
+/* Desktop : grille classique, pas de scroll */
+.avis-scroll {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
@@ -33,51 +34,103 @@
   transform: translateY(-3px);
 }
 
+.avis-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.avis-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #FBE4ED;
+  color: #F0047F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avis-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avis-nom {
+  display: block;
+  color: #1F1B1D;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
 .avis-stars {
   color: #F0047F;
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 2px;
-  margin-bottom: 14px;
 }
 
 .avis-text {
   color: #1F1B1D;
   font-size: 0.98rem;
   line-height: 1.55;
-  margin-bottom: 18px;
   font-style: italic;
-}
-
-.avis-author {
-  border-top: 1px solid #F3E6EC;
-  padding-top: 12px;
-}
-
-.avis-nom {
-  color: #8A6672;
-  font-size: 0.88rem;
-  font-weight: 500;
 }
 
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 992px) {
-  .avis-grid {
+  .avis-scroll {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* En dessous de 768px : on passe au scroll horizontal */
 @media (max-width: 768px) {
   .avis-velvet {
     padding: 40px 0 30px;
   }
 
-  .avis-grid {
-    grid-template-columns: 1fr;
+  .avis-scroll {
+    display: flex;
+    flex-wrap: nowrap;
     gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #F5A9D2 transparent;
+  }
+
+  .avis-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .avis-scroll::-webkit-scrollbar-thumb {
+    background-color: #F5A9D2;
+    border-radius: 10px;
   }
 
   .avis-card {
+    flex: 0 0 240px;
     padding: 20px 18px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 576px) {
+  .avis-scroll {
+    gap: 12px;
+  }
+
+  .avis-card {
+    flex: 0 0 82vw;
   }
 }

@@ -39,8 +39,6 @@ function FAQ() {
             <div
               className={`faq-item ${ouvert === index ? 'active' : ''}`}
               key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 80}
             >
               <button className="faq-question" onClick={() => toggle(index)}>
                 <span>{item.q}</span>
