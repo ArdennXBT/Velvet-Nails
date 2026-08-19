@@ -6,7 +6,7 @@ function CTA() {
     <section className="cta-section">
       <div className="container">
         <div className="cta-card text-center" data-aos="fade-up">
-          <span className="cta-badge">Prête à démarrer ?</span>
+          <span className="cta-badge">Prenez soin de vous</span>
 
           <h2 className="cta-title">
             Sublimez vos mains,<br />
@@ -21,7 +21,7 @@ function CTA() {
             Prendre un rendez-vous
           </Link>
 
-          <p className="cta-note">Sans engagement</p>
+          <p>Fais avec soin</p>
         </div>
       </div>
     </section>

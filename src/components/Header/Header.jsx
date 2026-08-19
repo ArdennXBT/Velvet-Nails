@@ -14,7 +14,31 @@ function Header() {
         <div className="header-inner">
           {/* Logo */}
           <NavLink to="/" className="header-logo" onClick={closeMenu}>
-            Velvet Nails
+            <svg
+              className="header-logo-icon"
+              viewBox="0 0 60 60"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="30" cy="30" r="26" fill="#F0047F" />
+              <path
+                d="M30 15
+                   C 30 15, 12 25, 12 38
+                   C 12 47, 20 54, 30 54
+                   C 40 54, 48 47, 48 38
+                   C 48 25, 30 15, 30 15 Z"
+                fill="#FFFFFF"
+              />
+              <path
+                d="M30 22
+                   C 30 22, 19 30, 19 39
+                   C 19 46, 24 51, 30 51"
+                fill="none"
+                stroke="#F5A9D2"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            <span className="header-logo-text">Velvet Nails</span>
           </NavLink>
 
           {/* Bouton hamburger (mobile) */}

@@ -30,6 +30,9 @@
 }
 
 .calendrier-arrow {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
   background: #fff;
   border: 1.5px solid #F3DCE3;
   border-radius: 50%;
@@ -44,9 +47,11 @@
   justify-content: center;
 }
 
-.calendrier-arrow:hover {
+.calendrier-arrow:hover,
+.calendrier-arrow:focus {
   background-color: #FCE0EE;
   border-color: #F0047F;
+  outline: none;
 }
 
 .calendrier-mois {
@@ -77,6 +82,7 @@
 }
 
 .calendrier-case {
+  -webkit-tap-highlight-color: transparent;
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
@@ -98,15 +104,19 @@
   cursor: pointer;
 }
 
-.calendrier-case.dispo:hover {
+.calendrier-case.dispo:hover,
+.calendrier-case.dispo:focus {
   background-color: #FCE0EE;
+  outline: none;
 }
 
 .calendrier-case.indispo {
   color: #C9BEC3;
 }
 
-.calendrier-case.selectionne {
+.calendrier-case.selectionne,
+.calendrier-case.selectionne:hover,
+.calendrier-case.selectionne:focus {
   background-color: #F0047F;
   color: #fff;
   font-weight: 600;
@@ -180,6 +190,9 @@
 }
 
 .creneau-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
   background: #fff;
   border: 1.5px solid #F3DCE3;
   border-radius: 999px;
@@ -190,12 +203,16 @@
   transition: all 0.2s ease;
 }
 
-.creneau-btn:hover {
+.creneau-btn:hover,
+.creneau-btn:focus {
   border-color: #F0047F;
   color: #F0047F;
+  outline: none;
 }
 
-.creneau-actif {
+.creneau-actif,
+.creneau-actif:hover,
+.creneau-actif:focus {
   background-color: #F0047F;
   border-color: #F0047F;
   color: #fff;
@@ -214,6 +231,7 @@
 }
 
 .rdv-upload-zone {
+  -webkit-tap-highlight-color: transparent;
   border: 1.5px dashed #F5A9D2;
   border-radius: 12px;
   padding: 28px 20px;
@@ -242,6 +260,9 @@
 }
 
 .rdv-btn-confirm {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: #F0047F;
   color: #fff;
   border-radius: 999px;
@@ -252,10 +273,12 @@
   transition: all 0.25s ease;
 }
 
-.rdv-btn-confirm:hover {
+.rdv-btn-confirm:hover,
+.rdv-btn-confirm:focus {
   background-color: #C4056B;
   color: #fff;
   transform: translateY(-1px);
+  outline: none;
 }
 
 .rdv-confirmation {

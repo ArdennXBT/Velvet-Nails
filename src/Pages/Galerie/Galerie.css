@@ -32,6 +32,9 @@
 }
 
 .filtre-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: #fff;
   border: 1.5px solid #F3DCE3;
   color: #8A6672;
@@ -43,12 +46,16 @@
   transition: all 0.25s ease;
 }
 
-.filtre-btn:hover {
+.filtre-btn:hover,
+.filtre-btn:focus {
   border-color: #F0047F;
   color: #F0047F;
+  outline: none;
 }
 
-.filtre-btn-active {
+.filtre-btn-active,
+.filtre-btn-active:hover,
+.filtre-btn-active:focus {
   background-color: #F0047F;
   border-color: #F0047F;
   color: #fff;
