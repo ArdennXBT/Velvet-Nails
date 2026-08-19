@@ -21,7 +21,7 @@ function CTA() {
             Prendre un rendez-vous
           </Link>
 
-          <p>Fais avec soin</p>
+         
         </div>
       </div>
     </section>
