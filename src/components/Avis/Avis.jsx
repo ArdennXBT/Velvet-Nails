@@ -3,44 +3,35 @@ import './Avis.css';
 function Avis() {
   const avis = [
     {
-      nom: 'Fatou A.',
+      nom: 'Evelyn',
       note: 5,
       commentaire: 'Un travail minutieux, je recommande vivement.',
-      photo: '',
+      photo: '/images/avis/evelyn.jpg',
       approuve: true,
     },
     {
-      nom: 'Aïcha K.',
+      nom: 'Velvet',
       note: 5,
       commentaire: 'Accueil chaleureux et résultat impeccable.',
-      photo: '',
+      photo: '/images/avis/velvet.jpg',
       approuve: true,
     },
     {
-      nom: 'Sandra M.',
+      nom: 'Noor',
       note: 4,
       commentaire: 'Très jolie pose, tient plusieurs semaines.',
-      photo: '',
+      photo: '/images/avis/noor.jpg',
       approuve: true,
     },
   ];
 
   const avisApprouves = avis.filter((item) => item.approuve);
 
-  const getInitiales = (nom) => {
-    return nom
-      .split(' ')
-      .map((mot) => mot[0])
-      .join('')
-      .toUpperCase()
-      .slice(0, 2);
-  };
-
   return (
     <section className="avis-velvet">
       <div className="container">
         <p className="avis-label" data-aos="fade-up">
-          CE QU’ELLES EN PENSENT
+          CE QU'ELLES EN PENSENT
         </p>
 
         <div className="avis-scroll">
@@ -48,11 +39,7 @@ function Avis() {
             <div className="avis-card" key={index}>
               <div className="avis-header">
                 <div className="avis-avatar">
-                  {item.photo ? (
-                    <img src={item.photo} alt={item.nom} />
-                  ) : (
-                    <span>{getInitiales(item.nom)}</span>
-                  )}
+                  <img src={item.photo} alt={item.nom} loading="lazy" />
                 </div>
                 <div>
                   <span className="avis-nom">{item.nom}</span>
@@ -63,7 +50,7 @@ function Avis() {
                 </div>
               </div>
 
-              <p className="avis-text">“{item.commentaire}”</p>
+              <p className="avis-text">"{item.commentaire}"</p>
             </div>
           ))}
         </div>
