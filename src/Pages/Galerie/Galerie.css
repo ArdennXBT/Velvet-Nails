@@ -1,5 +1,5 @@
 .galerie-velvet {
-  background-color: #ffffff;
+  background-color: #FDF6F8;
   padding: 50px 0 60px;
 }
 
@@ -108,6 +108,13 @@
 
 /* ========== RESPONSIVE ========== */
 
+/* Grand écran : 4 colonnes */
+@media (min-width: 1200px) {
+  .galerie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .galerie-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -121,6 +128,22 @@
 
   .galerie-grid {
     gap: 12px;
+  }
+
+  /* Pas de hover sur tactile : overlay visible en permanence, discret */
+  .galerie-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(31, 27, 29, 0.45), transparent 45%);
+    padding: 10px;
+  }
+
+  .galerie-overlay span {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+  }
+
+  .galerie-item:hover .galerie-img {
+    transform: none;
   }
 }
 

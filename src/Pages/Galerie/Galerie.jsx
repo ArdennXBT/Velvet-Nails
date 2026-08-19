@@ -8,29 +8,32 @@ function Galerie() {
   const [filtreActif, setFiltreActif] = useState('Tous');
 
   const images = [
-    // ===== FLORAL (5) =====
-    { id: 1, categorie: 'Floral', src: '/images/galerie/floral-1.jpg' },
-    { id: 2, categorie: 'Floral', src: '/images/galerie/floral-2.jpg' },
-    { id: 3, categorie: 'Floral', src: '/images/galerie/floral-3.jpg' },
-    { id: 4, categorie: 'Floral', src: '/images/galerie/floral-4.jpg' },
-    { id: 5, categorie: 'Floral', src: '/images/galerie/floral-5.jpg' },
+    // ===== PEDICURES (6) =====
+    { id: 1, categorie: 'Pédicures', src: '/images/galerie/pedicure-1.jpg' },
+    { id: 2, categorie: 'Pédicures', src: '/images/galerie/pedicure-2.jpg' },
+    { id: 3, categorie: 'Pédicures', src: '/images/galerie/pedicure-3.jpg' },
+    { id: 4, categorie: 'Pédicures', src: '/images/galerie/pedicure-4.jpg' },
+    { id: 5, categorie: 'Pédicures', src: '/images/galerie/pedicure-5.jpg' },
+    { id: 6, categorie: 'Pédicures', src: '/images/galerie/pedicure-6.jpg' },
 
-    // ===== 3D (5) =====
-    { id: 6, categorie: '3D', src: '/images/galerie/3d-1.jpg' },
-    { id: 7, categorie: '3D', src: '/images/galerie/3d-2.jpg' },
-    { id: 8, categorie: '3D', src: '/images/galerie/3d-3.jpg' },
-    { id: 9, categorie: '3D', src: '/images/galerie/3d-4.jpg' },
-    { id: 10, categorie: '3D', src: '/images/galerie/3d-5.jpg' },
+    // ===== FRENCH (7) =====
+    { id: 7, categorie: 'French', src: '/images/galerie/french-1.jpg' },
+    { id: 8, categorie: 'French', src: '/images/galerie/french-2.jpg' },
+    { id: 9, categorie: 'French', src: '/images/galerie/french-3.jpg' },
+    { id: 10, categorie: 'French', src: '/images/galerie/french-4.jpg' },
+    { id: 11, categorie: 'French', src: '/images/galerie/french-5.jpg' },
+    { id: 12, categorie: 'French', src: '/images/galerie/french-6.jpg' },
+    { id: 13, categorie: 'French', src: '/images/galerie/french-7.jpg' },
 
-    // ===== CLASSIC (5) =====
-    { id: 11, categorie: 'Classic', src: '/images/galerie/classic-1.jpg' },
-    { id: 12, categorie: 'Classic', src: '/images/galerie/classic-2.jpg' },
-    { id: 13, categorie: 'Classic', src: '/images/galerie/classic-3.jpg' },
-    { id: 14, categorie: 'Classic', src: '/images/galerie/classic-4.jpg' },
-    { id: 15, categorie: 'Classic', src: '/images/galerie/classic-5.jpg' },
+    // ===== COULEURS & NAIL ART (5) =====
+    { id: 14, categorie: 'Couleurs', src: '/images/galerie/couleurs-1.jpg' },
+    { id: 15, categorie: 'Couleurs', src: '/images/galerie/couleurs-2.jpg' },
+    { id: 16, categorie: 'Couleurs', src: '/images/galerie/couleurs-3.jpg' },
+    { id: 17, categorie: 'Couleurs', src: '/images/galerie/couleurs-4.jpg' },
+    { id: 18, categorie: 'Couleurs', src: '/images/galerie/couleurs-5.jpg' },
   ];
 
-  const categories = ['Tous', 'Floral', '3D', 'Classic'];
+  const categories = ['Tous', 'Pédicures', 'French', 'Couleurs'];
 
   const imagesFiltrees =
     filtreActif === 'Tous'
